@@ -1,0 +1,247 @@
+/* =========================
+   Absurdly Intelligent
+   Clean Dark Blog Theme
+   ========================= */
+
+:root{
+  --bg: #07090d;
+  --panel: #0e121a;
+  --panel2: #0b0f16;
+  --text: #dbe3ee;
+  --muted: #9aa6b6;
+  --line: rgba(255,255,255,0.08);
+  --accent: #6bb4ff;
+  --radius: 18px;
+  --max: 980px;
+}
+
+*{ box-sizing:border-box; }
+
+html, body{
+  margin:0;
+  padding:0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  line-height: 1.55;
+}
+
+/* Global layout */
+.wrap{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Header */
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(7,9,13,0.78);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding: 14px 0;
+}
+
+.brand{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  text-decoration:none;
+  color: var(--text);
+}
+
+.brand-dot{
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 18px rgba(107,180,255,0.35);
+}
+
+.brand-title{
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 1.05rem;
+}
+
+.brand-sub{
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-left: 8px;
+  display:none;
+}
+
+@media(min-width: 700px){
+  .brand-sub{ display:inline; }
+}
+
+/* Hero */
+.hero{
+  padding: 44px 0 22px;
+}
+
+.hero h1{
+  margin: 0;
+  font-size: clamp(2rem, 4.2vw, 3.2rem);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.hero p{
+  margin: 16px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  max-width: 70ch;
+}
+
+/* Posts List */
+.posts{
+  padding: 18px 0 70px;
+  display:grid;
+  gap: 16px;
+}
+
+.post-card{
+  display:grid;
+  grid-template-columns: 210px 1fr;
+  gap: 18px;
+  background: linear-gradient(180deg, var(--panel), var(--panel2));
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow:hidden;
+  text-decoration:none;
+  color: inherit;
+  transition: transform 160ms ease, border-color 160ms ease;
+}
+
+.post-card:hover{
+  transform: translateY(-2px);
+  border-color: rgba(107,180,255,0.22);
+}
+
+.post-thumb{
+  width: 100%;
+  height: 100%;
+  min-height: 150px;
+  object-fit: cover;
+  display:block;
+  filter: saturate(1.05) contrast(1.05);
+}
+
+.post-body{
+  padding: 18px 16px 18px 0;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.post-title{
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+.post-meta{
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.post-desc{
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 0.98rem;
+  max-width: 75ch;
+}
+
+@media(max-width: 680px){
+  .post-card{
+    grid-template-columns: 1fr;
+  }
+  .post-body{
+    padding: 14px 16px 18px;
+  }
+  .post-thumb{
+    height: 190px;
+  }
+}
+
+/* Footer */
+.footer{
+  border-top: 1px solid var(--line);
+  padding: 22px 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  text-align:center;
+}
+
+/* Article page */
+.article{
+  padding: 36px 0 70px;
+  max-width: 860px;      /* tighter than homepage for reading */
+  margin: 0 auto;
+}
+
+.breadcrumb{
+  display:inline-block;
+  color: var(--accent);
+  text-decoration:none;
+  font-weight: 650;
+  margin-bottom: 14px;
+}
+
+.article h1{
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.article .date{
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.article .content{
+  margin-top: 26px;
+  max-width: 78ch;       /* keeps paragraph measure nice */
+  margin-left: auto;     /* centers the column */
+  margin-right: auto;
+  padding: 0 10px;       /* extra inner padding so it never touches edges */
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+
+.article .content p{
+  margin: 0 0 18px;
+  color: rgba(219,227,238,0.92);
+}
+
+.article .img{
+  display: block;
+  width: auto;
+  max-width: min(100%, 740px); /* never upscale, cap on desktop */
+  height: auto;
+  margin: 18px auto 26px;
+  border-radius: 18px;
+  border: 1px solid var(--line);
+}
+
+
+
+.article .divider{
+  height: 1px;
+  background: var(--line);
+  margin: 30px 0 20px;
+}
