@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Moonwalkers: Walking, But Make It Faster — Absurdly Intelligent</title>
+  <link rel="stylesheet" href="../../assets/style.css" />
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="../../">
+        <span class="brand-dot"></span>
+        <span class="brand-title">Absurdly Intelligent</span>
+        <span class="brand-sub"></span>
+      </a>
+    </div>
+  </header>
+
+  <article class="wrap article">
+
+    <a class="breadcrumb" href="../../">← Back to posts</a>
+
+    <h1>Moonwalkers: walking, but make it faster.</h1>
+    <div class="date">January 12, 2026 • 2 min read • Category: speed walking</div>
+
+    <div class="divider"></div>
+
+    <!-- IMAGE 1 PLACEHOLDER -->
+    <!-- img1.png: hero image of the shoe on a white background -->
+    <img class="img" src="img1.png" alt="Placeholder: Moonwalkers shoe hero image" loading="lazy" />
+
+    <div class="content">
+
+      <p>
+        Some people buy gadgets to improve their lives. Shift Robotics looked at walking — a system that’s worked
+        reasonably well for a while — and decided it was moving too slowly. The result is <strong>Moonwalkers</strong>:
+        powered shoes with wheels on the bottom that move as you step, so you’re still walking normally, just faster
+        than nature intended. You’re not skating, gliding, or floating — you’re just aggressively walking with help.
+        It’s less “learning a new skill” and more “your legs now have a mild engine attached.” If you want the official
+        product page, it’s here:
+        <a href="https://shiftrobotics.io/products/moonwalkers-aero" target="_blank" style="color:var(--accent); text-decoration:none;">
+          shiftrobotics.io/products/moonwalkers-aero
+        </a>.
+      </p>
+
+
+      <!-- IMAGE 2 PLACEHOLDER -->
+      <!-- img2.png: man out for a walk with the shoes on -->
+      <img class="img" src="img2.png" alt="Placeholder: person walking outside wearing Moonwalkers" loading="lazy" />
+
+      <p>
+        The funny part: there’s no hand controller. No joystick. No “press X to sprint.”
+        To speed up, you walk faster. To slow down, you walk slower. It sounds obvious until you realize how rare it is
+        for a gadget to work exactly the way your brain expects it to. The software (yes, there’s software) learns your
+        walking habits and adapts to you, which means your shoes are quietly studying your stride like a tiny foot therapist.
+        Here’s the launch/demo video:
+        <a href="https://www.youtube.com/watch?v=8r0TPD5NUQ0" target="_blank" style="color:var(--accent); text-decoration:none;">
+          youtube.com/watch?v=8r0TPD5NUQ0
+        </a>.
+        Practical uses include finally keeping up with your dog’s preferred walking speed, turning basic errands into
+        a productivity flex, and passing slow walkers without performing the awkward sidewalk shuffle.
+      </p>
+
+
+      <!-- IMAGE 3 PLACEHOLDER -->
+      <!-- img3.png: shoes going over uneven terrain (small pothole) -->
+      <img class="img" src="img3.png" alt="Placeholder: Moonwalkers handling uneven terrain" loading="lazy" />
+
+      <p>
+        Pricing is where the future taps you on the shoulder: the <strong>Moonwalkers Aero</strong> are <strong>4-wheel drive</strong> and
+        cost <strong>$999</strong>. The upgraded <strong>Moonwalkers</strong> are <strong>8-wheel drive</strong> and cost <strong>$1399</strong> —
+        and if you’re actually going to buy these, you should probably go for the 8-wheel version because uneven sidewalks, potholes,
+        and “surprise trail” moments are absolutely a thing in the real world. The Aero is the “slick city commuter” option.
+        The 8-wheel is the “I refuse to be slowed by terrain” option. Either way, you’re paying four figures to become a person
+        who can casually stroll at an unreasonable pace — which is either peak innovation or the beginning of a very specific kind of villain arc.
+      </p>
+
+    </div>
+
+  </article>
+
+  <footer class="footer">
+    <div class="wrap">
+      © <span id="year"></span> Absurdly Intelligent
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
